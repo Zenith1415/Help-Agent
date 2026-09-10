@@ -126,7 +126,9 @@ def run_benchmark(sample_limit: int = None, run_judge: bool = True, use_cache: b
             preds["main"]["intent"].append(cached_res["classification"]["intent"])
             preds["main"]["escalate"].append(cached_res["escalation"]["should_escalate"])
             preds["main"]["replies"].append(cached_res["draft_reply"])
+            print(f"      [{i}/{len(golden_data)}] (cached) {cached_res['classification']['intent']} -> {'ESCALATE' if cached_res['escalation']['should_escalate'] else 'AUTO'}", flush=True)
         else:
+            t_start_item = time.time()
             res = process_message(msg)
             preds["main"]["intent"].append(res["classification"]["intent"])
             preds["main"]["escalate"].append(res["escalation"]["should_escalate"])
@@ -137,17 +139,18 @@ def run_benchmark(sample_limit: int = None, run_judge: bool = True, use_cache: b
             cache["main_pipeline"][item_id] = res
             cache_modified = True
 
-        if i % 15 == 0 or i == len(golden_data):
-            print(f"      Processed {i}/{len(golden_data)} inquiries...")
+            dt_item = round(time.time() - t_start_item, 1)
+            print(f"      [{i}/{len(golden_data)}] live ({dt_item}s): {res['classification']['intent']} -> {'ESCALATE' if res['escalation']['should_escalate'] else 'AUTO'}", flush=True)
 
     # Step 4: LLM-as-a-Judge Evaluation (on 25 cases)
     judge_sample_size = min(25, len(golden_data))
     if run_judge:
-        print(f"\n[4/4] Running LLM-as-a-Judge Rubric Evaluation on {judge_sample_size} cases...")
+        print(f"\n[4/4] Running LLM-as-a-Judge Rubric Evaluation on {judge_sample_size} cases...", flush=True)
         if "judge" not in cache:
             cache["judge"] = {}
 
         for system_key in ["trivial", "simple", "main"]:
+            print(f"\n      Scoring {system_key.capitalize()} System...", flush=True)
             scores = []
             if system_key not in cache["judge"]:
                 cache["judge"][system_key] = {}
@@ -166,6 +169,7 @@ def run_benchmark(sample_limit: int = None, run_judge: bool = True, use_cache: b
                     cache_modified = True
 
                 scores.append(j_res)
+                print(f"        [{i+1}/{judge_sample_size}] {system_key.capitalize()} scored {j_res['composite_score']}/5.0 (rel={j_res['relevance']}, grd={j_res['groundedness']})", flush=True)
             preds[system_key]["judge_scores"] = scores
 
     if cache_modified:
