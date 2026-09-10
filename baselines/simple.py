@@ -54,12 +54,16 @@ class SimpleBaseline:
         print("[i] Training simple TF-IDF + Logistic Regression baseline...")
         from eval.build_golden_set import identify_candidate_intent
 
-        if not TRAIN_POOL_PATH.exists():
-            raise FileNotFoundError(f"Training pool not found at {TRAIN_POOL_PATH}")
+        SEED_POOL_PATH = Path(__file__).resolve().parent.parent / "data" / "processed" / "retrieval_seed_pairs.csv"
+        if TRAIN_POOL_PATH.exists():
+            df_train = pd.read_csv(TRAIN_POOL_PATH).dropna(subset=["customer_msg"])
+        elif SEED_POOL_PATH.exists():
+            df_train = pd.read_csv(SEED_POOL_PATH).dropna(subset=["customer_msg"])
+        else:
+            raise FileNotFoundError(f"Neither {TRAIN_POOL_PATH.name} nor {SEED_POOL_PATH.name} found.")
 
-        # Sample 4,000 training examples for quick, balanced training
-        df_train = pd.read_csv(TRAIN_POOL_PATH).dropna(subset=["customer_msg"])
-        df_sample = df_train.sample(n=min(6000, len(df_train)), random_state=42).copy()
+        # Sample training examples for quick, balanced training
+        df_sample = df_train.sample(n=min(4000, len(df_train)), random_state=42).copy()
         
         # Weak-supervision labels using taxonomy rules
         df_sample["label"] = df_sample["customer_msg"].apply(identify_candidate_intent)

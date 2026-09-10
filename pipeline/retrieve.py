@@ -47,11 +47,16 @@ class Retriever:
             print(f"[OK] Loaded FAISS index with {self.index.ntotal} historical pairs.")
             return
 
-        print(f"[i] Building FAISS index from {TRAIN_POOL_CSV.name}...")
-        if not TRAIN_POOL_CSV.exists():
-            raise FileNotFoundError(f"Training pool not found at {TRAIN_POOL_CSV}. Run eval/build_golden_set.py first.")
+        SEED_CSV = INDEX_DIR / "retrieval_seed_pairs.csv"
+        if TRAIN_POOL_CSV.exists():
+            print(f"[i] Building FAISS index from {TRAIN_POOL_CSV.name}...")
+            df = pd.read_csv(TRAIN_POOL_CSV).dropna(subset=["customer_msg", "brand_reply"])
+        elif SEED_CSV.exists():
+            print(f"[i] Building FAISS index from {SEED_CSV.name} (seed repository fallback)...")
+            df = pd.read_csv(SEED_CSV).dropna(subset=["customer_msg", "brand_reply"])
+        else:
+            raise FileNotFoundError(f"Neither {TRAIN_POOL_CSV.name} nor {SEED_CSV.name} found. Run data/download_data.py first.")
 
-        df = pd.read_csv(TRAIN_POOL_CSV).dropna(subset=["customer_msg", "brand_reply"])
         df = df.drop_duplicates(subset=["customer_msg"]).head(self.index_size)
 
         # Exclude generic DM redirect replies if possible to favor grounded replies

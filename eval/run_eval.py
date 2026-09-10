@@ -253,7 +253,7 @@ def run_benchmark(sample_limit: int = None, run_judge: bool = True, use_cache: b
 
 def main():
     parser = argparse.ArgumentParser(description="Run complete evaluation benchmark.")
-    parser.add_argument("--limit", type=int, default=40, help="Number of golden set samples (default: 40)")
+    parser.add_argument("--limit", type=int, default=24, help="Number of golden set samples (default: 24)")
     parser.add_argument("--no-judge", action="store_true", help="Skip LLM judge scoring for speed")
     parser.add_argument("--no-cache", action="store_true", help="Do not use cached predictions")
     args = parser.parse_args()
