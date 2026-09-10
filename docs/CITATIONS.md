@@ -43,3 +43,22 @@ This document logs all external libraries, datasets, models, prompt patterns, an
 - **FAISS (Facebook AI Similarity Search)**: Meta Research (`faiss-cpu`) for fast dense vector nearest-neighbor search.
 - **Scikit-Learn**: Pedregosa et al. for KMeans clustering, TF-IDF vectorization, Logistic Regression baseline, and evaluation metrics (Cohen's kappa, Macro-F1).
 - **Pandas / NumPy**: Wes McKinney et al. for tabular data transformation and pair reconstruction.
+
+---
+
+## 4. AI Assistance & Pair Programming Disclosure
+
+In accordance with assignment guidelines encouraging transparent attribution of AI coding assistants:
+
+- **Tools Used**: Google Antigravity / Gemini CLI coding assistant (powered by Gemini models).
+- **Role of AI Assistant**:
+  - Code scaffolding and boilerplate generation (fast chunked streaming in `data/filter_brand.py`, FAISS retrieval wrapper in `pipeline/retrieve.py`, unit test fixtures in `tests/test_pipeline.py`).
+  - Evaluation metric implementations (`eval/metrics.py`, Cohen's kappa calculation in `eval/agreement_check.py`).
+  - Initial drafting of technical documentation and markdown summaries.
+- **Role of Human Author / Engineer**:
+  - All high-level architectural decisions (selecting AmazonHelp, 8-intent operational granularity, in-memory FAISS vs fine-tuning, prioritizing escalation recall over precision).
+  - Designing the multi-stage priority escalation cascade and explicit reason logging policies.
+  - Curating and hand-labeling the 176-example golden evaluation set from the 10k holdout pool.
+  - Identifying, diagnosing, and explaining the **Accuracy vs. Macro-F1 Paradox** and semantic divergence between surface keyword matching and pragmatic LLM understanding.
+  - Conducting failure analysis and blind human-vs-judge scoring.
+  - Comprehensive line-by-line code review, live debugging, and final approval of all system components. Ready to explain and modify any section of code live during review.
