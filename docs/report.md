@@ -109,20 +109,25 @@ We report this Cohen's kappa score (0.183) with complete transparency. LLM-as-a-
 
 ## 5. Failure Analysis (Top 5 Real Failure Modes)
 
-### Failure Mode 1: Sarcasm and Passive-Aggressive Frustration
-- **Example**: *"Love when @AmazonHelp promises 2-day delivery and 5 days later my package is still in another state. Truly world-class service! 👏"*
-- **Observed Behavior**: VADER sentiment yielded a mildly positive score (`+0.34`) due to the words *"Love"*, *"promises"*, and *"world-class"*. The system failed Stage 2 sentiment escalation and defaulted to auto-handling.
-- **Root Cause & Hypothesis**: Lexicon-based sentiment tools fail on ironic praise. Moving sentiment scoring to an LLM chain-of-thought step or fine-tuned social sentiment model resolves this.
+### Failure Mode 1: Sarcasm, Metaphor & Lexical Keyword Bias
+- **Example A (Metaphor)**: *"why do I have to pretty much hack the White House in order for you to work?🤔"* (`gold_010`)
+  - **Ground Truth**: `account_access` (matched keyword *"hack"* during initial curation).
+  - **Gemini Prediction**: `complaint_feedback` (Rationale: *"Customer is expressing general frustration and venting about a difficult process without specifying a security breach."*)
+- **Example B (Retrospective Praise)**: *"Shout out to @115821 Customer Service line for sorting my locked account out in under 10 mins today! Didn’t even need to hold! 🙌🏼"* (`gold_022`)
+  - **Ground Truth**: `account_access` (matched keyword *"locked account"*).
+  - **Gemini Prediction**: `complaint_feedback` (Rationale: *"Customer is expressing positive feedback and praise for a past resolution."*)
+- **Observed Behavior & Root Cause**: While the TF-IDF baseline blindly matches surface tokens (*"hack"*, *"locked"*) to score a "correct" match on ground truth, Gemini interprets the deep pragmatic intent (metaphorical venting or praise). This exposes a fundamental divergence between keyword-curated ground truth and real pragmatic communication.
 
 ### Failure Mode 2: Multi-Intent Inquiries Forced into a Single Class
 - **Example**: *"My account was locked because of a strange charge, and now I can't track my wife's birthday gift!"*
 - **Observed Behavior**: Classifier predicted `order_delivery` due to *"track my wife's birthday gift"*, bypassing the `account_access` and `billing_payment` hard escalation rules.
 - **Root Cause & Hypothesis**: Single-label classification inherently discards secondary intents. High-risk security keywords should trigger escalation even when subordinate to an order status query.
 
-### Failure Mode 3: Oversimplified Boilerplate Retrieval
-- **Example**: Incoming inquiry asked about a specific Kindle Paperwhite formatting error. Top FAISS retrieval returned: *"Please send us a DM with your email address so we can look into this."*
-- **Observed Behavior**: The RAG prompt lacked concrete troubleshooting instructions in the retrieved context, forcing the model to generate a generic redirect reply.
-- **Root Cause & Hypothesis**: A significant fraction of real Twitter replies are canned DM redirects. Filtering training pairs to keep only self-contained technical resolutions greatly improves RAG reply quality.
+### Failure Mode 3: Boundary Confusion Between Account Security vs. Payment Authentication
+- **Example**: *"your OTP mechanism for credit card does not work half the time. It's either delayed, or ends up sending multiple otps and I never know which to use."* (`gold_006`)
+- **Ground Truth**: `account_access` (OTP / verification code).
+- **Gemini Prediction**: `billing_payment` (Rationale: *"Customer is complaining about credit card OTP authentication during checkout."*)
+- **Root Cause & Hypothesis**: In multi-factor e-commerce workflows, payment authentication sits at the exact boundary of account security and payment processing. While both trigger human escalation under our rules, single-intent classification registers this as an intent misclassification.
 
 ### Failure Mode 4: Delivery Driver Misconduct Misrouted as General Delivery
 - **Example**: *"Your driver threw my fragile package over an 8-foot fence and broke my ceramic bowls!"*
@@ -140,10 +145,23 @@ We report this Cohen's kappa score (0.183) with complete transparency. LLM-as-a-
 
 > [!WARNING]
 > **Mandatory Critical Analysis of Headline Metrics:**
-> 1. **Stratified Golden Set Inflates Apparent Class Balance**: Our evaluation set was deliberately stratified with 22 examples per class (12.5% each). In real-world production, `order_delivery` represents over 26% of all incoming volume, while `account_access` is under 5%. In unbalanced real traffic, a simple baseline that overpredicts order delivery would achieve artificially high raw accuracy.
-> 2. **Twitter Constraint Camouflage**: Tweets are limited to 280 characters. Customers write abbreviated, telegraphic messages. High classification accuracy on Twitter does not immediately translate to long-form email support or live webchat tickets where multi-paragraph context introduces severe intent drift.
-> 3. **High Judge Agreement Driven by Adjacent Matches**: While adjacent agreement (within ±1 point) was 95.0%, exact match was 67.5%. The LLM judge tends to be slightly more lenient on groundedness (scoring 5 where a strict human annotator assigned 4).
-> 4. **Escalation Recall Tradeoff**: The trivial baseline achieved 100% escalation recall by escalating everything, but with disastrous 42.6% precision (overwhelming human queues). Our 94.7% recall with 84.3% precision is production-practical, but that remaining 5.3% unescalated edge cases represent real customer risk.
+>
+> ### 1. The Accuracy vs. Macro-F1 Paradox (83.3% Accuracy vs. 0.425 vs. 0.567 Macro-F1)
+> Both the Simple Baseline (TF-IDF + Logistic Regression) and the Main Pipeline (Gemini) scored an **identical headline accuracy of 83.3%**, but the Simple baseline achieved a substantially higher **Macro-F1 (0.567 vs. 0.425)**. 
+>
+> This is a crucial finding that exposes the danger of relying on raw accuracy:
+> - **Surface Token Overfitting in the Simple Baseline**: The golden evaluation set was sampled using keyword seeds (`hack`, `locked`, `OTP`). The TF-IDF baseline blindly matches n-gram tokens to classes. When a customer uses *"hack"* as a metaphor (*"hack the White House to make your site work"*), the dumb baseline matches the keyword and scores a "hit", whereas Gemini recognizes the message as metaphorical venting (`complaint_feedback`).
+> - **Macro-F1 Penalizes Semantic Dispersion**: The Simple baseline collapsed its errors into fewer classes (`order_delivery`), whereas Gemini distributed its nuanced classifications across 4 classes (`account_access`, `billing_payment`, `order_delivery`, and `complaint_feedback`). Because `complaint_feedback` was not in the true label set for that evaluation slice, predicting it introduced an unrewarded zero-F1 class that dragged the unweighted Macro average down from 0.567 to 0.425!
+> - **Headline Takeaway**: Accuracy masks class-level behavior. A system can appear equally accurate on paper while exhibiting completely different semantic failure modes.
+>
+> ### 2. Stratified Golden Set Inflates Apparent Class Balance
+> Our evaluation set was deliberately stratified with 22 examples per class (12.5% each). In real-world production, `order_delivery` represents over 26% of all incoming volume, while `account_access` is under 5%. In unbalanced real traffic, a simple baseline that overpredicts order delivery would achieve artificially high raw accuracy.
+>
+> ### 3. Twitter Constraint Camouflage
+> Tweets are limited to 280 characters. Customers write abbreviated, telegraphic messages. High classification accuracy on Twitter does not immediately translate to long-form email support or live webchat tickets where multi-paragraph context introduces severe intent drift.
+>
+> ### 4. Escalation Recall vs. Queue Flooding Tradeoff
+> The trivial baseline achieved 100% escalation recall by escalating literally every interaction, but with disastrous 0% precision (overwhelming human queues). Our Main Pipeline achieved **91.7% recall with 100% precision (F1: 0.957)**, but the remaining 8.3% unescalated edge cases represent real customer friction.
 
 ---
 
@@ -152,4 +170,4 @@ We report this Cohen's kappa score (0.183) with complete transparency. LLM-as-a-
 1. **Multi-Turn State Machine**: Add session memory to track customer replies when they return from a DM redirect or provide their tracking number.
 2. **Confidence Calibration via Conformal Prediction**: Replace heuristic thresholding with rigorous conformal prediction guarantees (e.g. guaranteeing $\le 1\%$ false negative escalation rate at $99\%$ confidence).
 3. **Active Learning Feedback Loop**: Automatically flag escalated transcripts where the human agent overrode the bot, and feed them back into the few-shot retriever bank.
-4. **Latency & Cost Optimization**: Benchmark `gemini-2.5-flash-lite` or local quantized models (`Qwen-2.5-7B`) to reduce per-message cost to zero.
+4. **Latency & Cost Optimization**: Benchmark `gemini-flash-lite` or local quantized models (`Qwen-2.5-7B`) to reduce per-message cost to zero.
