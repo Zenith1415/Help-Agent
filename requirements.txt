@@ -1,0 +1,19 @@
+# LLM SDK
+google-genai>=1.0.0
+google-generativeai>=0.8.0
+
+# Embeddings & Vector Search
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.4
+
+# ML, NLP & Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+vaderSentiment>=3.3.2
+
+# Utilities & Configuration
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+kaggle>=1.6.0
+pytest>=8.0.0

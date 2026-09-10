@@ -40,7 +40,11 @@ data/raw/
 *.tar.gz
 *.csv.zip
 twcs*.csv
-!data/processed/README.md
+data/processed/amazon_help_pairs.csv
+data/processed/train_pool.csv
+data/processed/holdout_pool.csv
+*.bin
+*.pkl
 
 # Embeddings & FAISS Indices
 *.faiss

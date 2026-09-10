@@ -1,0 +1,1116 @@
+{
+  "main_pipeline": {
+    "gold_001": {
+      "customer_message": "Not able to receive sms OTP for Amazon Pay. Attempted many time. Solution?",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 0.95,
+        "rationale": "The customer is experiencing issues receiving an OTP (One-Time Password) for verification/authentication, which falls under account access and security.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": 0.382,
+          "label": "positive"
+        },
+        "confidence": 0.95
+      },
+      "draft_reply": "I'm sorry you're facing trouble receiving the verification text. Please report it to our support team here: https://t.co/2t6DQoUmNZ and we'll look into it and help you. ^AP",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_002": {
+      "customer_message": "My amazon account is locked since 27 of October, I sent four faxes, about 12 emails and called 9 times already. The account specialist send me the same email over and over again. Im tired of this, loosing prime days and I just have about 20 more days in the US.. Thanks @115821.",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 0.95,
+        "rationale": "The customer is primarily complaining that their Amazon account has been locked and they are struggling to resolve the access issue despite contacting support multiple times.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": 0.178,
+          "label": "positive"
+        },
+        "confidence": 0.95
+      },
+      "draft_reply": "Hi, I'm sorry you're having trouble accessing your account. We'd love to help! Have you received any emails asking to verify any information? ^AJ",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_003": {
+      "customer_message": "in a panic, someone changed my account email. Locked out now. Customer service says 24-48 hrs. Don’t need this stress.10yrcustomer",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 0.99,
+        "rationale": "The customer states that someone changed their account email and they are locked out, which directly relates to account security and access issues.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": -0.511,
+          "label": "negative"
+        },
+        "confidence": 0.99
+      },
+      "draft_reply": "I'm so sorry to hear this happened to your account. Have you already spoken with our phone or chat support team to get this reported? Please reach out to us directly through our contact page so we can look into this securely: https://www.amazon.com/contact-us ^RD",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_004": {
+      "customer_message": "I'm having problem with my app! Keeps telling me password wrong, &amp; I change then same again - help please!",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 0.95,
+        "rationale": "The customer is experiencing issues with their password and logging into the Amazon app, which falls under account access and security.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": -0.337,
+          "label": "negative"
+        },
+        "confidence": 0.95
+      },
+      "draft_reply": "I'm sorry to hear about the troubles with your password! Have you attempted using the \"Forgot your password?\" button on the sign in page? This will allow you to either reset your password or use a temporary code to sign in. ^TH",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_005": {
+      "customer_message": "I can't reset my password. Every time I reset it and try to login using that password it says its incorrect.",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 1.0,
+        "rationale": "The customer is experiencing issues resetting their password and logging into their account.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": 0.0,
+          "label": "neutral"
+        },
+        "confidence": 1.0
+      },
+      "draft_reply": "I'm sorry to hear this. Just to confirm, is your account with https://t.co/nUUp5MLhYl, .co.uk or a different Amazon site? ^LI",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_006": {
+      "customer_message": "your OTP mechanism for credit card does not work half the time. It’s either delayed, or ends up sending multiple otps and I never know which to use.",
+      "classification": {
+        "intent": "billing_payment",
+        "confidence": 0.95,
+        "rationale": "The customer is complaining about issues with credit card OTP mechanisms and payment authentication during checkout.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=billing_payment (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": 0.178,
+          "label": "positive"
+        },
+        "confidence": 0.95
+      },
+      "draft_reply": "I'm sorry to hear about the trouble with receiving your OTP. We'd like to look into this for you. Please reach out to us here: https://t.co/vlvfJrlYEH and we'll be happy to help. ^AP",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_007": {
+      "customer_message": "it would be great if someone could contact me regarding a. rude staff b. Not being able to retrieve a password c. Not being able to close my acct d. You now having access to my information when I don’t!!",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 0.95,
+        "rationale": "The customer is explicitly asking for help regarding password retrieval, account closure, and concerns over account security and personal information access.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": 0.399,
+          "label": "positive"
+        },
+        "confidence": 0.95
+      },
+      "draft_reply": "So sorry to hear about your experience! Please reach out to our support team securely here: https://t.co/zYVX1Qi29G so we can look into this and assist you with your account. ^BL",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_008": {
+      "customer_message": "Help @AmazonHelp someone changed my email and password for my account. I can’t login now. https://t.co/EqOSaqluIC",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 1.0,
+        "rationale": "The customer is reporting that someone changed their email and password and they can no longer log into their account, which directly relates to account security and access.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": 0.402,
+          "label": "positive"
+        },
+        "confidence": 1.0
+      },
+      "draft_reply": "Oh no! I'm sorry for the account trouble! Have you reached us to report this yet here: https://t.co/jzvkhdlrK5?",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_009": {
+      "customer_message": "Your site sucks or has been hacked. Try to read the books I bought and it keeps saying sign in. then wrong password. goes in loop!!",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 0.4994,
+        "model": "simple_tfidf_lr",
+        "rationale": "Fallback due to LLM error: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 36.976437178s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '36s'}]}}"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": -0.835,
+          "label": "negative"
+        },
+        "confidence": 0.4994
+      },
+      "draft_reply": "Hello. For security reasons regarding your account login, please use our 2-step verification recovery page or reset your password.",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_010": {
+      "customer_message": "why do I have to pretty much hack the White House in order for you to work?🤔",
+      "classification": {
+        "intent": "complaint_feedback",
+        "confidence": 0.85,
+        "rationale": "The customer is expressing general frustration and venting about a difficult process or poor service experience without specifying an order, return, or technical issue.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": false,
+        "reason": "auto: confidence=0.85, sentiment=positive (0.494)",
+        "stage": 4,
+        "sentiment": {
+          "compound": 0.494,
+          "label": "positive"
+        },
+        "confidence": 0.85
+      },
+      "draft_reply": "I'm so sorry for the frustration! Without providing account specific details, could you tell us a little more about the trouble you're running into? We're here to help! ^HS",
+      "retrieved_context_count": 3,
+      "status": "auto_handled"
+    },
+    "gold_011": {
+      "customer_message": "Account locked for doing US seller transaction using amazon pay. Multiple mail/call, still no response from your side. Please check it",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 0.95,
+        "rationale": "The customer states that their account has been locked and they are unable to get a response regarding the lockout.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": 0.103,
+          "label": "neutral"
+        },
+        "confidence": 0.95
+      },
+      "draft_reply": "I'm sorry to hear your account is locked and you haven't heard back yet. Have you received any emails from our Account Specialists regarding this? ^AJ",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_012": {
+      "customer_message": "Screw you @115830 @AmazonHelp - I tried to sell something and now you have LOCKED ME OUT OF MY ACCOUNT. HOW DO I GET BACK IN?",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 1.0,
+        "rationale": "The customer explicitly states they are locked out of their account and asking how to regain access.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": -0.103,
+          "label": "neutral"
+        },
+        "confidence": 1.0
+      },
+      "draft_reply": "Hey there! I'm sorry to hear you've been locked out of your account. We'd love to help take a look into this for you. Please reach out to us here: https://t.co/jzvkhdlrK5 ^AJ",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_013": {
+      "customer_message": "I got an Amazon account with 250$ in the account, but the account is fucking locked, how do I fix this!!!!!!!!!!!! I can't make any purchases @AmazonHelp",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 0.99,
+        "rationale": "The customer is specifically complaining that their Amazon account is locked and they cannot make purchases or log in.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": 0.365,
+          "label": "positive"
+        },
+        "confidence": 0.99
+      },
+      "draft_reply": "Hello! I'm sorry to hear your account is locked. Have you received any emails from our account specialist team regarding this? Please check your inbox and reply directly to that email so they can help. ^AJ",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_014": {
+      "customer_message": "if you don't let me log in right now i will lose it",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 0.98,
+        "rationale": "The customer is explicitly expressing frustration about not being able to log into their account.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": -0.402,
+          "label": "negative"
+        },
+        "confidence": 0.98
+      },
+      "draft_reply": "We're so sorry for the frustration! Could you let us know what error you're seeing when you try to log in? We'd love to help get this sorted out for you. ^HD",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_015": {
+      "customer_message": "I forgot my password to get into my Kindle account. Now, you want me to contact Customer Service. But when I try, you tell me to log in again. How can I log in if you've locked me out????? This is stupid.",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 0.95,
+        "rationale": "The customer is struggling with forgetting their password, being locked out, and being unable to log in to their account.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": -0.751,
+          "label": "negative"
+        },
+        "confidence": 0.95
+      },
+      "draft_reply": "I'm sorry for the frustration with accessing your account! So we can have a specialist assist you directly, please reach out here: https://t.co/i2uOVl4YEX Click \"skip sign in\" near the bottom of the page, then select \"call me\" on the next page. ^SE",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_016": {
+      "customer_message": "There is something severely wrong with @115821 @AmazonHelp website! Reset my password tried using it and the website says \"incorrect password\". How's that possible when I JUST CHANGED IT?! I've tried this multiple times and it won't let me login. WTF is happening here?????🤬😡",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 1.0,
+        "rationale": "The customer is experiencing password reset and login issues, which falls directly under account access and security.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": -0.921,
+          "label": "negative"
+        },
+        "confidence": 1.0
+      },
+      "draft_reply": "I'm sorry you're having trouble logging in! Please reach out to us here: https://t.co/5D5BOLXLjp for assistance. ^KH",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_017": {
+      "customer_message": "someone recently changed my main email but not the password on my amazon, is there anyway I could get any of my audiobooks back?",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 0.95,
+        "rationale": "The customer's account email was changed without their permission, indicating a compromised or unauthorized access issue.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": 0.262,
+          "label": "positive"
+        },
+        "confidence": 0.95
+      },
+      "draft_reply": "I'm so sorry to hear this happened to your account! Please reach out to us here so we can take a closer look and help you with your account: https://t.co/hApLpMlfHN ^CC",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_018": {
+      "customer_message": "Hey, my acount has been locked for security reasons. Says I need to check my email but I have been sent nothing!",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 0.8695,
+        "model": "simple_tfidf_lr",
+        "rationale": "Fallback due to LLM error: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 5.736457643s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '5s'}]}}"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": 0.248,
+          "label": "positive"
+        },
+        "confidence": 0.8695
+      },
+      "draft_reply": "Hello. For security reasons regarding your account login, please use our 2-step verification recovery page or reset your password.",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_019": {
+      "customer_message": "I can't log in to my affiliate account. I get a error message, since 12 hours ago.",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 0.6518,
+        "model": "simple_tfidf_lr",
+        "rationale": "Fallback due to LLM error: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 54.365225961s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '54s'}]}}"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": -0.402,
+          "label": "negative"
+        },
+        "confidence": 0.6518
+      },
+      "draft_reply": "Hello. For security reasons regarding your account login, please use our 2-step verification recovery page or reset your password.",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_020": {
+      "customer_message": "Some weiner got into my amazon account at 3am and changed the email, password and phone number with my account. Hey @115821 can you help pls",
+      "classification": {
+        "intent": "account_access",
+        "confidence": 0.8825,
+        "model": "simple_tfidf_lr",
+        "rationale": "Fallback due to LLM error: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 43.120572429s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43s'}]}}"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=account_access (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": 0.612,
+          "label": "positive"
+        },
+        "confidence": 0.8825
+      },
+      "draft_reply": "Hello. For security reasons regarding your account login, please use our 2-step verification recovery page or reset your password.",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_021": {
+      "customer_message": "why is this happening: \"Your session has expired. Please sign in again by clicking on the Amazon Pay Button.\"",
+      "classification": {
+        "intent": "order_delivery",
+        "confidence": 0.3702,
+        "model": "simple_tfidf_lr",
+        "rationale": "Fallback due to LLM error: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 31.758990722s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '31s'}]}}"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: low confidence=0.37 < threshold=0.60",
+        "stage": 3,
+        "sentiment": {
+          "compound": 0.382,
+          "label": "positive"
+        },
+        "confidence": 0.3702
+      },
+      "draft_reply": "I'm sorry for the trouble with this! What kind of device are you using to sign in? ^PF",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_022": {
+      "customer_message": "Shout out to @115821 Customer Service line for sorting my locked account out in under 10 mins today! Didn’t even need to hold! 🙌🏼",
+      "classification": {
+        "intent": "complaint_feedback",
+        "confidence": 0.95,
+        "rationale": "The customer is expressing positive feedback and thanks for a great customer service experience regarding their account resolution.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": false,
+        "reason": "auto: confidence=0.95, sentiment=neutral (0.0)",
+        "stage": 4,
+        "sentiment": {
+          "compound": 0.0,
+          "label": "neutral"
+        },
+        "confidence": 0.95
+      },
+      "draft_reply": "That's wonderful to hear! We're so glad our team could get that sorted out quickly for you. Thanks for reaching out and have a great day! ^CS",
+      "retrieved_context_count": 3,
+      "status": "auto_handled"
+    },
+    "gold_023": {
+      "customer_message": "You are monthly deducting some Cents from my credit card (even after blocking it) and support cannot explain it.",
+      "classification": {
+        "intent": "billing_payment",
+        "confidence": 1.0,
+        "rationale": "The customer is complaining about unauthorized recurring charges deducted from their credit card.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=billing_payment (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": 0.402,
+          "label": "positive"
+        },
+        "confidence": 1.0
+      },
+      "draft_reply": "I'm sorry for the frustration with these charges! We'd love to take a closer look into this for you. Please reach out to us here: https://t.co/hApLpMlfHN ^DW",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    },
+    "gold_024": {
+      "customer_message": "I don't recognize Amazon Digital Svcs charges that appear on my credit card bill. I can find no charges under the orders part of my account. How do I get to the bottom of this?",
+      "classification": {
+        "intent": "billing_payment",
+        "confidence": 1.0,
+        "rationale": "The customer is asking about unrecognizable charges appearing on their credit card bill that do not correspond to any known order.",
+        "model": "gemini_few_shot"
+      },
+      "escalation": {
+        "should_escalate": true,
+        "reason": "escalated: intent=billing_payment (hard rule, security/financial risk)",
+        "stage": 1,
+        "sentiment": {
+          "compound": 0.201,
+          "label": "positive"
+        },
+        "confidence": 1.0
+      },
+      "draft_reply": "We're sorry for the unexpected charges! Have you reached out to us to look into this here: https://t.co/hApLpMlfHN? We're unable to view account details via Twitter. ^ST",
+      "retrieved_context_count": 3,
+      "status": "escalated_to_human"
+    }
+  },
+  "judge": {
+    "trivial": {
+      "gold_001": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 1,
+        "composite_score": 2.0,
+        "rationale": "The customer is asking for help regarding SMS OTP for Amazon Pay, but the agent's reply completely ignores this and instead talks about order status and package tracking, making it entirely irrelevant and unhelpful."
+      },
+      "gold_002": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 1,
+        "composite_score": 2.0,
+        "rationale": "The customer is complaining about a locked account and missing Prime Day while visiting the US. The drafted reply completely ignores the account access issue and tells the customer to check order status and tracking links, which makes no sense since the account is locked."
+      },
+      "gold_003": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 2,
+        "actionability": 2,
+        "composite_score": 2.0,
+        "rationale": "The customer is locked out of their account due to a compromised email change, but the agent's reply completely misses this context and gives generic advice about checking order status and tracking packages. Furthermore, the customer cannot access 'Your Orders' if they are locked out of their account."
+      },
+      "gold_004": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 2,
+        "composite_score": 2.25,
+        "rationale": "The customer is reporting an issue with password resets and app login, but the agent's reply talks about checking order status and tracking packages, which is completely irrelevant to the problem. It fails to address account access."
+      },
+      "gold_005": {
+        "relevance": 1,
+        "groundedness": 5,
+        "tone": 3,
+        "actionability": 1,
+        "composite_score": 2.5,
+        "rationale": "The drafted reply completely misses the customer's issue regarding password reset and provides irrelevant instructions about checking order status and tracking packages."
+      },
+      "gold_006": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 2,
+        "composite_score": 2.25,
+        "rationale": "The customer is complaining about credit card OTP issues during checkout, but the agent's reply is a generic response about tracking orders, making it entirely irrelevant to the specific problem."
+      },
+      "gold_007": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 2,
+        "actionability": 2,
+        "composite_score": 2.0,
+        "rationale": "The customer is reporting multiple serious issues including rude staff, password retrieval failures, account closure problems, and data privacy concerns. The agent's reply completely misses all of these concerns, providing generic advice about checking order status and tracking packages instead."
+      },
+      "gold_008": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 1,
+        "composite_score": 2.0,
+        "rationale": "The customer's account was compromised and they cannot log in. The agent's reply tells them to check 'Your Orders' on the website, which is impossible since they cannot access their account. It completely misses the core security issue."
+      },
+      "gold_009": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 1,
+        "composite_score": 2.0,
+        "rationale": "The customer is experiencing a login/password loop issue when trying to read their Kindle books. The AI agent's reply completely misses the mark by giving instructions on checking order status and package tracking, which has nothing to do with account access or e-reader login loops."
+      },
+      "gold_010": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 3.801654578s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '3s'}]}}"
+      },
+      "gold_011": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 58.161011155s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '58s'}]}}"
+      },
+      "gold_012": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 52.52461772s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '52s'}]}}"
+      },
+      "gold_013": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 46.575665943s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '46s'}]}}"
+      },
+      "gold_014": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 40.700194815s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}"
+      },
+      "gold_015": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 35.007338565s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '35s'}]}}"
+      },
+      "gold_016": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 2,
+        "actionability": 1,
+        "composite_score": 1.75,
+        "rationale": "The customer is experiencing account access and password reset issues, but the agent's reply completely ignores this and instead talks about order status and package tracking, making it entirely irrelevant and unhelpful."
+      },
+      "gold_017": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 2,
+        "composite_score": 2.25,
+        "rationale": "The agent's reply is completely irrelevant to the customer's issue. The customer is reporting an unauthorized email change on their account and asking about recovering audiobooks, but the agent replies with generic instructions about checking order status and tracking packages. This offers no help for an account takeover situation."
+      },
+      "gold_018": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 1,
+        "composite_score": 2.0,
+        "rationale": "The customer is complaining that their account is locked and they did not receive an email to unlock it. The agent's reply is completely irrelevant, telling them to check their order status or tracking link, which is impossible if their account is locked and misses the issue entirely."
+      },
+      "gold_019": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 1,
+        "composite_score": 2.0,
+        "rationale": "The customer is experiencing a login issue with their affiliate account, but the agent's reply completely misses the topic by giving instructions on how to check order status and track packages. This makes the response irrelevant and inactionable for the user's specific problem."
+      },
+      "gold_020": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 1,
+        "composite_score": 2.0,
+        "rationale": "The customer's account was compromised and their login credentials were changed, but the agent's reply gives generic advice about checking order status and tracking links, which is completely irrelevant and unhelpful for an account takeover issue."
+      },
+      "gold_021": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 2,
+        "composite_score": 2.25,
+        "rationale": "The customer is asking about a session expiration error related to Amazon Pay, but the agent's reply completely ignores this and gives instructions on how to check order status and tracking, making it entirely irrelevant to the actual problem."
+      },
+      "gold_022": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 1,
+        "composite_score": 2.0,
+        "rationale": "The customer is praising customer service for sorting out a locked account, but the agent's reply completely ignores this and gives generic advice about checking order status and tracking packages. It is irrelevant and unhelpful to the context."
+      },
+      "gold_023": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 2,
+        "composite_score": 2.25,
+        "rationale": "The customer is complaining about unauthorized monthly charges on a credit card, but the agent replies with irrelevant advice about checking package tracking and order status. It completely misses the billing/payment intent."
+      },
+      "gold_024": {
+        "relevance": 2,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 2,
+        "composite_score": 2.5,
+        "rationale": "The customer is asking about unrecognized 'Amazon Digital Svcs' charges that do not appear in 'Your Orders', which often indicates digital subscriptions, shared household accounts, or potential unauthorized use. The agent's reply simply tells them to check 'Your Orders' or track a package (irrelevant for a digital charge with no order history), failing to address the specific nuance of digital charges or unauthorized billing, and provides poor actionability for this specific scenario."
+      }
+    },
+    "simple": {
+      "gold_001": {
+        "relevance": 1,
+        "groundedness": 1,
+        "tone": 3,
+        "actionability": 1,
+        "composite_score": 1.5,
+        "rationale": "The drafted reply completely misses the customer's issue regarding Amazon Pay SMS OTP failures, instead talking about package delivery and 'Your Orders'. It is irrelevant and hallucinated in the context of the inquiry."
+      },
+      "gold_002": {
+        "relevance": 2,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 2,
+        "composite_score": 2.5,
+        "rationale": "The customer's account is locked and being handled by account specialists via email/fax, but the agent suggests generic password/2SV recovery which likely won't resolve an account specialist lockout. It lacks a clear path forward like asking for a DM to escalate."
+      },
+      "gold_003": {
+        "relevance": 2,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 2,
+        "composite_score": 2.5,
+        "rationale": "The customer's email was changed by someone else, locking them out. Telling them to reset their password or use 2-step verification is unhelpful because they no longer have access to the changed email address. A better step would be to direct them to account recovery or ask for a DM to verify their identity."
+      },
+      "gold_004": {
+        "relevance": 4,
+        "groundedness": 5,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 4.0,
+        "rationale": "The reply directly addresses the customer's password and login issue with accurate security advice, maintaining a polite and professional tone suited for Twitter. However, it lacks a direct call to action or a link/DM prompt to guide the customer immediately."
+      },
+      "gold_005": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 2,
+        "composite_score": 2.75,
+        "rationale": "The reply acknowledges the password reset issue but gives generic advice that essentially repeats what the customer is already struggling to do. It lacks a clear, direct path or a request to DM for secure assistance."
+      },
+      "gold_006": {
+        "relevance": 1,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 2,
+        "composite_score": 2.25,
+        "rationale": "The customer is complaining about credit card OTP (One-Time Password) delivery issues during checkout, but the agent's reply talks about unauthorized or unexpected charges and digital orders. It completely misses the actual problem, making it irrelevant and unhelpful."
+      },
+      "gold_007": {
+        "relevance": 3,
+        "groundedness": 4,
+        "tone": 3,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "The drafted reply addresses the password retrieval issue, but completely ignores the other major complaints (rude staff, account closure, and data privacy concerns). It provides a standard recovery suggestion but lacks a comprehensive resolution path or a call to DM for secure assistance."
+      },
+      "gold_008": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 4.617252433s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '4s'}]}}"
+      },
+      "gold_009": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 58.886129596s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '58s'}]}}"
+      },
+      "gold_010": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 53.124222056s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '53s'}]}}"
+      },
+      "gold_011": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 47.513895164s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '47s'}]}}"
+      },
+      "gold_012": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 41.503785938s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '41s'}]}}"
+      },
+      "gold_013": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 35.802993287s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '35s'}]}}"
+      },
+      "gold_014": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 30.159352265s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '30s'}]}}"
+      },
+      "gold_015": {
+        "relevance": 3,
+        "groundedness": 4,
+        "tone": 2,
+        "actionability": 3,
+        "composite_score": 3.0,
+        "rationale": "The reply addresses account recovery, but the tone is overly robotic and dismissive of the customer's frustration. It also fails to provide a direct link or clear, empathetic guidance on how to bypass the login loop the customer is experiencing."
+      },
+      "gold_016": {
+        "relevance": 3,
+        "groundedness": 5,
+        "tone": 3,
+        "actionability": 3,
+        "composite_score": 3.5,
+        "rationale": "The reply addresses the login issue by suggesting a password reset, which is relevant, but it fails to acknowledge the customer's frustration and repeats an action the customer already stated they tried. It lacks a direct call to action like asking them to DM for further help."
+      },
+      "gold_017": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 3,
+        "composite_score": 3.0,
+        "rationale": "The reply addresses account security and password resets, but fails to directly answer the customer's specific concern about recovering their purchased audiobooks after an email change."
+      },
+      "gold_018": {
+        "relevance": 4,
+        "groundedness": 4,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.75,
+        "rationale": "The reply directly addresses the account lock issue and suggests using the recovery/password reset page. However, it lacks a direct link or an invitation to DM for more specific help, making the actionability slightly weaker."
+      },
+      "gold_019": {
+        "relevance": 5,
+        "groundedness": 5,
+        "tone": 4,
+        "actionability": 4,
+        "composite_score": 4.5,
+        "rationale": "The reply directly addresses the customer's login issue, suggests standard security measures (2-step verification or password reset), maintains a polite and concise tone appropriate for Twitter, and gives clear next steps."
+      },
+      "gold_020": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 2,
+        "composite_score": 2.75,
+        "rationale": "The reply addresses account security, but is unhelpful since the customer's email, password, and phone number were all changed by someone else, making standard password reset or 2-step verification recovery difficult without direct support intervention. It also fails to offer a DM link for secure assistance."
+      },
+      "gold_021": {
+        "relevance": 1,
+        "groundedness": 1,
+        "tone": 3,
+        "actionability": 2,
+        "composite_score": 1.75,
+        "rationale": "The agent completely misunderstood the customer's issue. The customer is asking about an 'Amazon Pay session expired' error message, but the agent replied with information about package delivery tracking."
+      },
+      "gold_022": {
+        "relevance": 3,
+        "groundedness": 5,
+        "tone": 3,
+        "actionability": 3,
+        "composite_score": 3.5,
+        "rationale": "The customer is posting positive feedback about an already resolved issue, but the agent responds with generic troubleshooting steps as if the customer still needs help. While the advice is safe and grounded, it misses the context that the issue is already sorted."
+      },
+      "gold_023": {
+        "relevance": 3,
+        "groundedness": 5,
+        "tone": 3,
+        "actionability": 2,
+        "composite_score": 3.25,
+        "rationale": "The reply addresses unexpected charges generally, but misses the nuance of recurring deductions persisting even after blocking the card. It gives a basic suggestion to check statements, but fails to offer a clear path to contact support or investigate specific subscriptions/digital services, and does not invite the customer to DM for account-specific help."
+      },
+      "gold_024": {
+        "relevance": 3,
+        "groundedness": 5,
+        "tone": 3,
+        "actionability": 2,
+        "composite_score": 3.25,
+        "rationale": "The reply suggests checking digital orders, which the customer already stated they did. It fails to offer a direct next step like contacting customer service or investigating shared accounts, making it only partially helpful and lacking clear actionability."
+      }
+    },
+    "main": {
+      "gold_001": {
+        "relevance": 5,
+        "groundedness": 5,
+        "tone": 5,
+        "actionability": 5,
+        "composite_score": 5.0,
+        "rationale": "The reply directly addresses the customer's issue with receiving SMS OTP, maintains a polite and concise Twitter-appropriate tone, provides a clear and actionable link/next step, and adheres strictly to standard support procedures without making unauthorized promises."
+      },
+      "gold_002": {
+        "relevance": 3,
+        "groundedness": 5,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.75,
+        "rationale": "The agent acknowledges the account access issue and asks a clarifying question about verification emails, which is a standard procedure. However, given that the customer already stated they sent multiple emails and kept getting the same automated response, asking if they received verification emails lacks deep contextual awareness. Tone is polite and concise, and actionability is moderate since it invites a response, though it doesn't offer a direct escalation path for an account that has been locked for weeks."
+      },
+      "gold_003": {
+        "relevance": 3,
+        "groundedness": 5,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.75,
+        "rationale": "The reply acknowledges the customer's stressful situation and provides a link to contact support securely. However, since the customer already stated they spoke with customer service and were told 24-48 hours, asking if they have spoken to support and redirecting them to contact us again is redundant and slightly frustrating for someone who is locked out."
+      },
+      "gold_004": {
+        "relevance": 5,
+        "groundedness": 5,
+        "tone": 5,
+        "actionability": 5,
+        "composite_score": 5.0,
+        "rationale": "The agent directly addresses the customer's password loop issue, provides accurate and standard account recovery steps, maintains a polite and concise Twitter-appropriate tone, and gives a clear immediate action."
+      },
+      "gold_005": {
+        "relevance": 3,
+        "groundedness": 5,
+        "tone": 5,
+        "actionability": 3,
+        "composite_score": 4.0,
+        "rationale": "The agent asks a clarifying question about the domain to ensure region-specific help, which is a sensible diagnostic step, but it delays addressing the password reset loop directly. The tone is polite and Twitter-appropriate, and it gives a clear next step (replying with the domain)."
+      },
+      "gold_006": {
+        "relevance": 5,
+        "groundedness": 5,
+        "tone": 5,
+        "actionability": 5,
+        "composite_score": 5.0,
+        "rationale": "The agent acknowledges the specific customer issue regarding OTP delays, maintains a polite and empathetic Twitter-appropriate tone, remains strictly grounded by offering further assistance, and provides a clear next step by directing the customer to a secure support link."
+      },
+      "gold_007": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 4.613438836s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '4s'}]}}"
+      },
+      "gold_008": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 58.982531953s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '58s'}]}}"
+      },
+      "gold_009": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 53.187160709s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '53s'}]}}"
+      },
+      "gold_010": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 47.428676844s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '47s'}]}}"
+      },
+      "gold_011": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 41.797393146s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '41s'}]}}"
+      },
+      "gold_012": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 36.061167287s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '36s'}]}}"
+      },
+      "gold_013": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 4,
+        "actionability": 3,
+        "composite_score": 3.25,
+        "rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 30.516456418s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '30s'}]}}"
+      },
+      "gold_014": {
+        "relevance": 5,
+        "groundedness": 5,
+        "tone": 5,
+        "actionability": 5,
+        "composite_score": 5.0,
+        "rationale": "The agent directly addresses the frustrated customer by expressing empathy, asking for specific error details to diagnose the login issue, and providing a clear, actionable next step via direct message or reply."
+      },
+      "gold_015": {
+        "relevance": 5,
+        "groundedness": 5,
+        "tone": 5,
+        "actionability": 5,
+        "composite_score": 5.0,
+        "rationale": "The agent directly addresses the customer's catch-22 (being asked to log in to get help for a locked account) by providing the specific workaround to 'skip sign in'. The tone is empathetic, concise, and professional, and the actionability is high with clear instructions and a link."
+      },
+      "gold_016": {
+        "relevance": 5,
+        "groundedness": 5,
+        "tone": 4,
+        "actionability": 5,
+        "composite_score": 4.75,
+        "rationale": "The agent directly addresses the account access issue, provides a standard secure link for assistance, maintains an appropriate and empathetic tone despite the customer's frustration, and gives a clear next step."
+      },
+      "gold_017": {
+        "relevance": 5,
+        "groundedness": 5,
+        "tone": 5,
+        "actionability": 5,
+        "composite_score": 5.0,
+        "rationale": "The agent directly addresses the critical account security issue, provides an empathetic and Twitter-appropriate tone, and gives a clear, actionable link for account recovery support."
+      },
+      "gold_018": {
+        "relevance": 4,
+        "groundedness": 4,
+        "tone": 4,
+        "actionability": 4,
+        "composite_score": 4.0,
+        "rationale": "The reply directly addresses the account lock issue and suggests legitimate self-service recovery options, though providing a direct link or asking them to check spam/trash folders could have made it even more actionable."
+      },
+      "gold_019": {
+        "relevance": 5,
+        "groundedness": 5,
+        "tone": 4,
+        "actionability": 4,
+        "composite_score": 4.5,
+        "rationale": "The agent directly addresses the login error by suggesting account recovery methods and password resets, maintaining a secure and appropriate tone."
+      },
+      "gold_020": {
+        "relevance": 3,
+        "groundedness": 3,
+        "tone": 3,
+        "actionability": 2,
+        "composite_score": 2.75,
+        "rationale": "The reply addresses the account security issue, but gives generic advice that is likely useless to a customer who has already been locked out of their account and had their email, password, and phone number changed by a hacker. They cannot simply reset their password normally. It lacks an offer to connect via DM for secure verification."
+      },
+      "gold_021": {
+        "relevance": 5,
+        "groundedness": 5,
+        "tone": 5,
+        "actionability": 5,
+        "composite_score": 5.0,
+        "rationale": "The agent directly addresses the user's login error by asking for necessary troubleshooting context (device type) in a polite, concise, and Twitter-appropriate manner, providing a clear immediate next step."
+      },
+      "gold_022": {
+        "relevance": 5,
+        "groundedness": 5,
+        "tone": 5,
+        "actionability": 5,
+        "composite_score": 5.0,
+        "rationale": "The agent's reply is polite, appropriately enthusiastic, concise, and directly acknowledges the customer's positive feedback regarding their resolved account issue without needing any further action."
+      },
+      "gold_023": {
+        "relevance": 5,
+        "groundedness": 5,
+        "tone": 5,
+        "actionability": 5,
+        "composite_score": 5.0,
+        "rationale": "The agent acknowledges the customer's frustration, addresses the billing issue appropriately, maintains a polite and concise Twitter-appropriate tone, and provides a clear next step by directing them to a secure support link."
+      },
+      "gold_024": {
+        "relevance": 5,
+        "groundedness": 5,
+        "tone": 5,
+        "actionability": 5,
+        "composite_score": 5.0,
+        "rationale": "The agent directly addresses the unknown charges by explaining they cannot view account details on Twitter and provides a direct, helpful link for the customer to contact support securely."
+      }
+    }
+  }
+}

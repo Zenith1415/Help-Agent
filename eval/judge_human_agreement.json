@@ -1,0 +1,329 @@
+{
+  "sample_size": 40,
+  "exact_match_rate": 0.45,
+  "adjacent_agreement_rate": 0.575,
+  "mean_absolute_error": 0.975,
+  "cohens_kappa_quadratic": 0.1834,
+  "details": [
+    {
+      "id": "gold_001",
+      "customer_msg": "Not able to receive sms OTP for Amazon Pay. Attempted many time. Solution?",
+      "draft_reply": "I'm sorry you're facing trouble receiving the OTP. Please report it to our support team here: https://t.co/2t6DQoUmNZ and we'll look into it and help you. ^AP",
+      "human_score": 5,
+      "judge_score": 5,
+      "judge_rationale": "The drafted reply directly addresses the customer's issue with receiving an SMS OTP, maintains an empathetic and polite Twitter-appropriate tone, provides a realistic and safe support link, and gives a clear actionable next step."
+    },
+    {
+      "id": "gold_002",
+      "customer_msg": "My amazon account is locked since 27 of October, I sent four faxes, about 12 emails and called 9 times already. The account specialist send me the same email over and over again. Im tired of this, loosing prime days and I just have about 20 more days in the US.. Thanks @115821.",
+      "draft_reply": "Hi there, I'm so sorry for the frustration and trouble you've had accessing your account. We'd love to take a closer look into this for you. Could you please reach out to us directly via our secure page here: https://t.co/nUUp5MLhYl so we can assist further? ^AJ",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The agent directly addresses the customer's account access issue with empathy, provides a clear and secure next step via a direct link for account verification, maintains a professional and polite Twitter-appropriate tone, and avoids making unauthorized policy promises."
+    },
+    {
+      "id": "gold_003",
+      "customer_msg": "in a panic, someone changed my account email. Locked out now. Customer service says 24-48 hrs. Don\u2019t need this stress.10yrcustomer",
+      "draft_reply": "I'm so sorry to hear this happened to your account. Have you already spoken with our phone or chat support team to get this reported? Please reach out to us directly through our contact page so we can look into this for you securely: https://www.amazon.com/contact-us ^RD",
+      "human_score": 5,
+      "judge_score": 5,
+      "judge_rationale": "The agent acknowledges the customer's stressful situation empathetically, verifies if they've spoken to support already, and provides a clear, secure path forward via the contact page."
+    },
+    {
+      "id": "gold_004",
+      "customer_msg": "I'm having problem with my app! Keeps telling me password wrong, &amp; I change then same again - help please!",
+      "draft_reply": "I'm sorry to hear about the troubles with your password! Have you attempted using the \"Forgot your password?\" button on the sign in page? This will allow you to either reset your password or use a temporary code to sign in. ^TH",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The agent directly addresses the customer's password loop issue, offers a standard troubleshooting step, maintains a polite and empathetic Twitter-appropriate tone, and gives a clear actionable path forward."
+    },
+    {
+      "id": "gold_005",
+      "customer_msg": "I can't reset my password. Every time I reset it and try to login using that password it says its incorrect.",
+      "draft_reply": "I'm sorry to hear this. Just to confirm, is your account with https://t.co/nUUp5MLhYl, .co.uk or a different Amazon site? ^LI",
+      "human_score": 3,
+      "judge_score": 4,
+      "judge_rationale": "The agent asks a clarifying question to determine the correct regional domain, which is a necessary troubleshooting step for account access issues, but it does not immediately provide a direct solution to the password loop."
+    },
+    {
+      "id": "gold_006",
+      "customer_msg": "your OTP mechanism for credit card does not work half the time. It\u2019s either delayed, or ends up sending multiple otps and I never know which to use.",
+      "draft_reply": "Hello. For any unauthorized or unexpected charges, please check your digital orders and payment statement to review the transaction details.",
+      "human_score": 3,
+      "judge_score": 3,
+      "judge_rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 16.02971673s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '16s'}]}}"
+    },
+    {
+      "id": "gold_007",
+      "customer_msg": "it would be great if someone could contact me regarding a. rude staff b. Not being able to retrieve a password c. Not being able to close my acct d. You now having access to my information when I don\u2019t!!",
+      "draft_reply": "Hello. For security reasons regarding your account login, please use our 2-step verification recovery page or reset your password.",
+      "human_score": 3,
+      "judge_score": 3,
+      "judge_rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 58.488804761s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '58s'}]}}"
+    },
+    {
+      "id": "gold_008",
+      "customer_msg": "Help @AmazonHelp someone changed my email and password for my account. I can\u2019t login now. https://t.co/EqOSaqluIC",
+      "draft_reply": "Oh no, I am so sorry! Please contact us at this link : https://t.co/jzvkhdlrK5 so we can help you with this issue. ^CC",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The agent appropriately addresses the account takeover issue with high empathy, directs the customer to the correct secure support channel, maintains a polite and Twitter-appropriate tone, and provides a clear next step."
+    },
+    {
+      "id": "gold_009",
+      "customer_msg": "Your site sucks or has been hacked. Try to read the books I bought and it keeps saying sign in. then wrong password. goes in loop!!",
+      "draft_reply": "I'm so sorry for the frustration with signing in to read your books! Please reach out to us here: https://t.co/zYVX1Qi29G so our team can look into this for you. ^JY",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The drafted reply directly addresses the customer's login loop issue with empathy, provides a secure and standard direct link for account assistance, maintains a polite and concise Twitter-appropriate tone, and gives a clear next step."
+    },
+    {
+      "id": "gold_010",
+      "customer_msg": "why do I have to pretty much hack the White House in order for you to work?\ud83e\udd14",
+      "draft_reply": "I'm so sorry for the frustration! Without providing account specific details, please tell us a little more about the issue you're running into. We're here to help! ^HS",
+      "human_score": 5,
+      "judge_score": 5,
+      "judge_rationale": "The agent acknowledges the customer's frustration with a polite and empathetic tone, respects privacy by asking them not to share personal details publicly, and provides a clear next step by asking for more information about the specific technical issue."
+    },
+    {
+      "id": "gold_011",
+      "customer_msg": "Account locked for doing US seller transaction using amazon pay. Multiple mail/call, still no response from your side. Please check it",
+      "draft_reply": "I'm sorry for the trouble with your account access and the wait for a response. Have you received any emails regarding this? ^AJ",
+      "human_score": 3,
+      "judge_score": 4,
+      "judge_rationale": "The reply directly addresses the account lock and lack of response with an empathetic tone, though asking if they received emails is slightly redundant since the customer already mentioned multiple emails/calls without response. A direct call to action to DM for account verification would be more effective."
+    },
+    {
+      "id": "gold_012",
+      "customer_msg": "Screw you @115830 @AmazonHelp - I tried to sell something and now you have LOCKED ME OUT OF MY ACCOUNT. HOW DO I GET BACK IN?",
+      "draft_reply": "We're sorry to hear you're locked out of your account. We want to take a look at this and help you get back in! Please reach out to us directly here: https://t.co/jzvkhdlrK5 ^AJ",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The agent directly addresses the account lockout issue, maintains a calm and empathetic tone despite the customer's hostility, is fully grounded in standard support escalation practices, and provides a clear next step with a link for direct assistance."
+    },
+    {
+      "id": "gold_013",
+      "customer_msg": "I got an Amazon account with 250$ in the account, but the account is fucking locked, how do I fix this!!!!!!!!!!!! I can't make any purchases @AmazonHelp",
+      "draft_reply": "Hey! I'm sorry you can't access your account. Have you received any emails from our account specialist team asking to verify any information? ^AJ",
+      "human_score": 3,
+      "judge_score": 3,
+      "judge_rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 25.539039924s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '25s'}]}}"
+    },
+    {
+      "id": "gold_014",
+      "customer_msg": "if you don't let me log in right now i will lose it",
+      "draft_reply": "Hello. For security reasons regarding your account login, please use our 2-step verification recovery page or reset your password.",
+      "human_score": 3,
+      "judge_score": 3,
+      "judge_rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 8.46992832s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '8s'}]}}"
+    },
+    {
+      "id": "gold_015",
+      "customer_msg": "I forgot my password to get into my Kindle account. Now, you want me to contact Customer Service. But when I try, you tell me to log in again. How can I log in if you've locked me out????? This is stupid.",
+      "draft_reply": "Hello. For security reasons regarding your account login, please use our 2-step verification recovery page or reset your password.",
+      "human_score": 3,
+      "judge_score": 3,
+      "judge_rationale": "The reply addresses password reset and recovery, which is relevant, but it fails to acknowledge the customer's frustrating circular loop of needing to log in to contact support. It lacks a clear, direct link or step-by-step guidance, and the tone is slightly robotic given the customer's frustration."
+    },
+    {
+      "id": "gold_016",
+      "customer_msg": "There is something severely wrong with @115821 @AmazonHelp website! Reset my password tried using it and the website says \"incorrect password\". How's that possible when I JUST CHANGED IT?! I've tried this multiple times and it won't let me login. WTF is happening here?????\ud83e\udd2c\ud83d\ude21",
+      "draft_reply": "I'm sorry you're having trouble logging in! Please reach out to us here: https://t.co/5D5BOLXLjp for assistance. ^KH",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The agent directly addresses the account access issue, provides a standard secure link for account assistance, maintains a polite tone despite the customer's frustration, and gives a clear next step."
+    },
+    {
+      "id": "gold_017",
+      "customer_msg": "someone recently changed my main email but not the password on my amazon, is there anyway I could get any of my audiobooks back?",
+      "draft_reply": "Oh no, I'm so sorry this happened to your account! We'd like to take a closer look into this with you here: https://t.co/jzvkhdlrK5 ^CC",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The reply directly addresses a serious account takeover issue with appropriate empathy, provides a secure link to contact customer support for account recovery, and maintains a concise, Twitter-appropriate tone."
+    },
+    {
+      "id": "gold_018",
+      "customer_msg": "Hey, my acount has been locked for security reasons. Says I need to check my email but I have been sent nothing!",
+      "draft_reply": "I'm sorry your account is locked! Can you please confirm that along with checking the inbox of the email address associated with your Amazon account, you've also checked your junk/spam folder? If you still don't see anything, reach out here: https://t.co/jzvkhdlrK5 ^BV",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The agent directly addresses the locked account and missing email issue, suggests checking spam/junk folders, and provides a direct, legitimate link for further support while maintaining a polite, concise Twitter-appropriate tone."
+    },
+    {
+      "id": "gold_019",
+      "customer_msg": "I can't log in to my affiliate account. I get a error message, since 12 hours ago.",
+      "draft_reply": "Sorry to hear this - what is the exact error you're facing? Any particular error that's popping up ? Do keep us posted. ^CB",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The agent appropriately asks for the specific error message to diagnose the login issue. The tone is polite and concise, fitting for Twitter, and it gives a clear next step for the customer."
+    },
+    {
+      "id": "gold_020",
+      "customer_msg": "Some weiner got into my amazon account at 3am and changed the email, password and phone number with my account. Hey @115821 can you help pls",
+      "draft_reply": "Oh no, I am so sorry! Please reach out to us here so we can help you with this: https://t.co/jzvkhdlrK5 ^CC",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The agent promptly addresses a hijacked account situation, provides a direct and safe escalation link, maintains an empathetic and concise Twitter-appropriate tone, and gives a clear next step."
+    },
+    {
+      "id": "gold_021",
+      "customer_msg": "why is this happening: \"Your session has expired. Please sign in again by clicking on the Amazon Pay Button.\"",
+      "draft_reply": "Hello! I understand you are inquiring about your delivery. According to our standard policy, you can track your package updates and delivery ETA directly in 'Your Orders' online.",
+      "human_score": 3,
+      "judge_score": 3,
+      "judge_rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 17.93393575s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '17s'}]}}"
+    },
+    {
+      "id": "gold_022",
+      "customer_msg": "Shout out to @115821 Customer Service line for sorting my locked account out in under 10 mins today! Didn\u2019t even need to hold! \ud83d\ude4c\ud83c\udffc",
+      "draft_reply": "Hello. For security reasons regarding your account login, please use our 2-step verification recovery page or reset your password.",
+      "human_score": 3,
+      "judge_score": 3,
+      "judge_rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 455.551604ms.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '0s'}]}}"
+    },
+    {
+      "id": "gold_023",
+      "customer_msg": "You are monthly deducting some Cents from my credit card (even after blocking it) and support cannot explain it.",
+      "draft_reply": "I'm so sorry for the frustration with these charges! We'd love to take a closer look into this with you. Please reach out to us here: https://t.co/hApLpMlfHN ^DW",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The agent acknowledges the customer's frustration regarding mysterious recurring charges, maintains a polite and empathetic tone appropriate for Twitter, and provides a clear next step by directing them to a secure link for further assistance."
+    },
+    {
+      "id": "gold_024",
+      "customer_msg": "I don't recognize Amazon Digital Svcs charges that appear on my credit card bill. I can find no charges under the orders part of my account. How do I get to the bottom of this?",
+      "draft_reply": "We're sorry for the unexpected charges! Have you had a chance to reach out to us here: https://t.co/hApLpMlfHN? We're unable to view account details via Twitter, but we'd love to look into this with you. ^ST",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The agent directly addresses the unknown digital charges, explains the limitation regarding Twitter for privacy/security reasons, provides a direct link for further assistance, and maintains an empathetic, Twitter-appropriate tone."
+    },
+    {
+      "id": "gold_025",
+      "customer_msg": "Amazon Support, https://t.co/JjAPW9EIGj seller central cheated bank account Please Call me + 91 9167937705 @AmazonHelp",
+      "draft_reply": "Sorry to hear about this. Did you contact seller central about this? What did they advise? ^PK",
+      "human_score": 3,
+      "judge_score": 4,
+      "judge_rationale": "The agent appropriately asks clarifying questions about Seller Central involvement, avoiding promises or falling for potential phishing. However, asking the customer to reply publicly with details is less actionable than directing them to DM or official Seller Support channels."
+    },
+    {
+      "id": "gold_026",
+      "customer_msg": "Just curious about something. I bought a few books off amazon using Debit card. Now if I were to cancel the order, will that amount be refunded back to my bank account or transferred to my amazon pay balance?",
+      "draft_reply": "I understand your concern. If you cancel an order paid via debit card, the refund is typically issued back to your original payment method. Learn more about refunds here: https://t.co/5Rp4p4vLCM ^SE",
+      "human_score": 5,
+      "judge_score": 5,
+      "judge_rationale": "The agent directly answers the customer's question about debit card refunds accurately, maintains a polite and concise Twitter-appropriate tone, and provides a helpful link for more information."
+    },
+    {
+      "id": "gold_027",
+      "customer_msg": "I hav an idea that will encourage sellers to sell globally. how about Introducing a new feature in the \"amazon pay\" so sellers can load funds for the subscriptn fees as many sellers still hesitate for Intl Credit Card due to several reasons this might surely help them",
+      "draft_reply": "Hi! I understand your perspective. I've shared your feedback regarding the Amazon Pay feature with our internal team for review. ^SB",
+      "human_score": 5,
+      "judge_score": 5,
+      "judge_rationale": "The agent directly acknowledges the customer's feature suggestion, adopts a polite and concise Twitter-appropriate tone, and confirms the feedback will be shared with the relevant team. Actionability is slightly limited due to the nature of the feedback request, but appropriate for a feature suggestion."
+    },
+    {
+      "id": "gold_028",
+      "customer_msg": "To whoever hacked my Amazon account and changed the email.... I look forward to seeing what you can buy with the $0.64 in my bank account.\ud83d\ude0f\ud83d\ude02",
+      "draft_reply": "Oh no! I'm sorry to hear about your account trouble. Have you reached out to report this yet here: https://t.co/jzvkhdlrK5? ^SH",
+      "human_score": 3,
+      "judge_score": 3,
+      "judge_rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 26.371152229s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '26s'}]}}"
+    },
+    {
+      "id": "gold_029",
+      "customer_msg": "Hello, how can I cancel the subscription??? Without my participation the money deducted from the card.",
+      "draft_reply": "Hello. For any unauthorized or unexpected charges, please check your digital orders and payment statement to review the transaction details.",
+      "human_score": 3,
+      "judge_score": 3,
+      "judge_rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 9.482364185s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '9s'}]}}"
+    },
+    {
+      "id": "gold_030",
+      "customer_msg": "please help me. I had load the amount in Amazon pay which is not yet crrdited in Amazon pay but deducted from my bank account \ud83d\ude36",
+      "draft_reply": "Hello. For any unauthorized or unexpected charges, please check your digital orders and payment statement to review the transaction details.",
+      "human_score": 3,
+      "judge_score": 3,
+      "judge_rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 52.669077859s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '52s'}]}}"
+    },
+    {
+      "id": "gold_031",
+      "customer_msg": "The #OnePlus5T is available for sale right now on @115850. Get it today with \u20b91500 cashback on @3021 Debit &amp; Credit cards. #OnePlus5TSale Get yours \ud83d\udc49 https://t.co/TfeVqf7uoP",
+      "draft_reply": "I understand your concern. I've noted your comments and forwarded your feedback internally for a review. ^BV",
+      "human_score": 4,
+      "judge_score": 2,
+      "judge_rationale": "The customer's message is a promotional tweet about a product and bank offer, not a support complaint or inquiry. The agent's canned response ('I understand your concern...') is completely irrelevant to the context and leaves no actionable next steps."
+    },
+    {
+      "id": "gold_032",
+      "customer_msg": "AmazonIN customer service is pathetic, I requested to refund to my amazon pay coz my bank account is closed! surprisingly Amazon like company do not have alternatives ways to refund a customer! Is Amazon most customer centric company? I doubt!",
+      "draft_reply": "I understand your concern regarding the refund method. To help look into this and check what options we have available, please reach out to us here: https://t.co/EKXRLsnxJu ^JS",
+      "human_score": 5,
+      "judge_score": 5,
+      "judge_rationale": "The agent directly acknowledges the customer's frustration regarding refund options for a closed bank account, maintains a polite and empathetic tone, and provides a clear, secure link for further assistance while staying well within standard support policies."
+    },
+    {
+      "id": "gold_033",
+      "customer_msg": "I haven't got the cashback at #Amazon_pay of my previous tranc yet, If I make another tranc for which I'm supposed to get cashback, then does the previous one get cancelled or I can still have the both? @115850",
+      "draft_reply": "I'm sorry to hear that you haven't received your cashback yet. Making another transaction will not cancel your eligibility for the previous one. To look into this securely, please reach out to us via our official customer service page: https://www.amazon.com/gp/help/customer/contact-us ^SB",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The agent directly answers the customer's specific question regarding whether a new transaction cancels a previous cashback, addresses the delayed cashback with empathy, maintains a professional and polite Twitter-appropriate tone, and provides a clear, actionable next step through the official customer service link."
+    },
+    {
+      "id": "gold_034",
+      "customer_msg": "I have not getten my cashback offer that was purchase on 12.08.2017",
+      "draft_reply": "Could you tell us more about the cashback you're referring to? ^HA",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The agent appropriately asks for more details regarding the specific cashback offer to investigate the issue further. The response is concise, polite, Twitter-appropriate, and gives a clear next step by asking the customer to provide more information."
+    },
+    {
+      "id": "gold_035",
+      "customer_msg": "After how much time of payment the Cashback is added to the concerned account.",
+      "draft_reply": "Sorry to know about this. Could you please share the details of the cashback offer you're referring to so we can look into this for you? ^PS",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The agent directly addresses the inquiry by asking for necessary details regarding the specific cashback offer to investigate further. The tone is polite and empathetic, perfectly suited for Twitter, and it provides a clear, actionable next step (sharing the details)."
+    },
+    {
+      "id": "gold_036",
+      "customer_msg": "you should give the option of sending Amazon pay balance to another amazon pay user or bank account.",
+      "draft_reply": "Hello. We sincerely apologize for your frustrating experience. We are committed to providing the highest quality customer care.",
+      "human_score": 4,
+      "judge_score": 3,
+      "judge_rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 22.944149593s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '22s'}]}}"
+    },
+    {
+      "id": "gold_037",
+      "customer_msg": "bought #amazonprime subscription on 16.10.17 under 100% #cashback offer.nothing has been credited to my amazon a/c. pls. help",
+      "draft_reply": "Hello. For any unauthorized or unexpected charges, please check your digital orders and payment statement to review the transaction details.",
+      "human_score": 3,
+      "judge_score": 3,
+      "judge_rationale": "Heuristic fallback: Gemini API request failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite\\nPlease retry in 6.07694441s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '6s'}]}}"
+    },
+    {
+      "id": "gold_038",
+      "customer_msg": "Customer Service FAIL! @115821 @1016 Agents still cannot resolve an issue after almost an hr. of trying to explain. They deleted all my credit card methods and didnt even know that the 2 accounts were linked",
+      "draft_reply": "Hello. For any unauthorized or unexpected charges, please check your digital orders and payment statement to review the transaction details.",
+      "human_score": 3,
+      "judge_score": 2,
+      "judge_rationale": "The customer is complaining about agents deleting credit card methods and failing to recognize linked accounts after a long call. The AI reply completely misses the context, talking about 'unauthorized or unexpected charges' and digital orders, which does not address the account linkage or missing payment methods."
+    },
+    {
+      "id": "gold_039",
+      "customer_msg": "I placed a few orders on Saturday on Amazon.ca however the money has yet to be taken out of my bank account and the two orders are still waiting to be shipped. One order was supposed to ship yesterday but it\u2019s now on \u201cwill ship soon\u201d.",
+      "draft_reply": "Sorry about the delay with your orders! Amazon typically doesn't charge your payment method until the items actually enter the shipping process. Have you checked the current status or estimated delivery date here: https://t.co/pYHdlcj0Ot? Keep us posted! ^HR",
+      "human_score": 5,
+      "judge_score": 5,
+      "judge_rationale": "The reply directly addresses both of the customer's concerns (payment timing and shipping status), correctly explains Amazon's billing policy (charging upon entering the shipping process), provides a helpful link to check status, and maintains a polite, concise Twitter-appropriate tone."
+    },
+    {
+      "id": "gold_040",
+      "customer_msg": "i place an order of a laptop and its showing 15% cash back if u pay through Amazon pay but i don't received any Cashback plz help",
+      "draft_reply": "Let us help you out here. Could you share a bit more details about the cashback you are referring to? Also, please avoid sharing any personal info publicly. We'd like to look into this for you. ^VM",
+      "human_score": 3,
+      "judge_score": 5,
+      "judge_rationale": "The agent addresses the customer's cashback issue politely, warns against sharing personal information publicly, and asks for more details to investigate further."
+    }
+  ]
+}
