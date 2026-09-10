@@ -1,8 +1,8 @@
 {
   "metadata": {
     "num_evaluated": 24,
-    "execution_time_seconds": 0.0,
-    "timestamp": "2026-09-11 02:33:57"
+    "execution_time_seconds": 244.3,
+    "timestamp": "2026-09-11 02:49:30"
   },
   "systems": {
     "trivial": {
@@ -17,10 +17,10 @@
         "accuracy": 1.0
       },
       "judge": {
-        "relevance": 1.54,
-        "groundedness": 3.08,
-        "tone": 3.12,
-        "actionability": 1.83,
+        "relevance": 1.42,
+        "groundedness": 3.25,
+        "tone": 3.04,
+        "actionability": 1.88,
         "composite": 2.4
       }
     },
@@ -36,17 +36,17 @@
         "accuracy": 0.3333
       },
       "judge": {
-        "relevance": 2.83,
-        "groundedness": 3.46,
+        "relevance": 2.88,
+        "groundedness": 3.58,
         "tone": 3.38,
-        "actionability": 2.62,
-        "composite": 3.07
+        "actionability": 2.67,
+        "composite": 3.12
       }
     },
     "main": {
       "intent": {
-        "accuracy": 0.8333,
-        "macro_f1": 0.425
+        "accuracy": 0.875,
+        "macro_f1": 0.5756
       },
       "escalation": {
         "precision": 1.0,
@@ -55,11 +55,11 @@
         "accuracy": 0.9167
       },
       "judge": {
-        "relevance": 4.04,
-        "groundedness": 4.29,
-        "tone": 4.42,
-        "actionability": 3.96,
-        "composite": 4.18
+        "relevance": 3.92,
+        "groundedness": 4.42,
+        "tone": 4.08,
+        "actionability": 3.75,
+        "composite": 4.04
       }
     }
   }
